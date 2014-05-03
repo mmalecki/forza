@@ -16,8 +16,7 @@ var server = net.createServer(cb(function (socket) {
     var chunk = stream.read(),
         clientPort;
 
-    if (chunk && chunk.service === 'health/process/start') {
-      assert.equal(chunk.metric, 1.0);
+    if (chunk && chunk.service === 'health/process/uptime') {
       assert.equal(chunk.meta.app.name, 'test-app');
       assert.equal(chunk.meta.app.user, 'maciej');
       assert.equal(chunk.meta.port, 1024);
