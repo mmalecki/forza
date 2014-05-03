@@ -4,5 +4,5 @@ forza
 config.mk
 include/forza-private/plugins.h
 libinterposed.*
-!src/plugins/start/libinterposed.c
+!src/plugins/uptime/libinterposed.c
 node_modules
